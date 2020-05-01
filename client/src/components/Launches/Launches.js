@@ -2,6 +2,8 @@ import React from "react";
 import gql from 'graphql-tag';
 import {Query, useQuery} from 'react-apollo';
 import LaunchItem from "./LaunchItem";
+import './Launches.sass'
+import Loading from "../Loading/Loading";
 
 
 export default function Launches() {
@@ -23,7 +25,7 @@ export default function Launches() {
                 {
                     ({loading, error, data}) => {
                         console.log(data)
-                        if (loading) return <p>loading</p>
+                        if (loading) return <Loading/>
                         if (error) return <p>error</p>
                         return <div>
                             {

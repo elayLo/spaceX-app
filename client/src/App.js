@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from 'react-apollo';
-import Launches from "./components/Launches";
+import Launches from "./components/Launches/Launches";
 
 const client = new ApolloClient({
     uri: 'http://localhost:4000/graphql'
